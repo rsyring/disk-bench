@@ -10,7 +10,6 @@ from diskbench import fio
 log = logging.getLogger(__name__)
 
 
-
 @click.command()
 @click.argument('fpath', type=click.Path(exists=False))
 @click.option('--size', default='1G')
