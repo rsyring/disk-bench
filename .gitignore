@@ -1,3 +1,7 @@
 *.egg-info
 .tox
 dist
+*.pyc
+coverage.xml
+*.pytests.xml
+.coverage
