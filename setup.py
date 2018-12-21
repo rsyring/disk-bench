@@ -34,7 +34,7 @@ setup(
         'sh',
         'tableprint',
     ],
-    entry_points={  # Optional
+    entry_points={
         'console_scripts': [
             'disk-bench=diskbench.cli:db',
         ],
