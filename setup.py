@@ -11,7 +11,7 @@ with open(version_fpath) as fo:
     exec(fo.read(), version_globals)
 
 setup(
-    name='diskbench',
+    name='disk-bench',
     version=version_globals['VERSION'],
     description='CLI tool to benchmark drive performance',
     long_description='\n\n'.join((README, CHANGELOG)),
