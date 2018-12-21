@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.1.3 released 2018-12-21
+-------------------------
+
+- support non-direct IO (f5ba899_)
+
+.. _f5ba899: https://github.com/rsyring/disk-bench/commit/f5ba899
+
+
 0.1.2 released 2018-12-20
 -------------------------
 
