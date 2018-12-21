@@ -5,3 +5,5 @@ dist
 coverage.xml
 *.pytests.xml
 .coverage
+.vscode
+build
