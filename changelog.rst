@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.1 released 2018-12-20
+-------------------------
+
+- fix pypi name (10d6115_)
+
+.. _10d6115: https://github.com/rsyring/disk-bench/commit/10d6115
+
 0.1.0 released 2018-12-20
 -------------------------
 
