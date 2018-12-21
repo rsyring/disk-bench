@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.1.4 released 2018-12-21
+-------------------------
+
+- fix cli direct flag (74aa304_)
+
+.. _74aa304: https://github.com/rsyring/disk-bench/commit/74aa304
+
+
 0.1.3 released 2018-12-21
 -------------------------
 
