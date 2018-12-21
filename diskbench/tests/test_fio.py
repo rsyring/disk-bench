@@ -1,9 +1,11 @@
+import mock
+
 from diskbench import fio
 from diskbench.testing import load_json
 
 
 def test_fio(tmpdir):
-    stats = fio.fio(tmpdir.strpath, loops=1, size='1m')
+    stats = fio.fio(tmpdir.strpath, loops=1, size='1m', direct=False)
 
     job_stats = stats[0]
     assert job_stats.name == 'seqread'
@@ -28,6 +30,21 @@ def test_fio(tmpdir):
     job_stats = stats[5]
     assert job_stats.name == '4kQD32write'
     assert job_stats.bw
+
+
+@mock.patch.object(fio, 'sh')
+@mock.patch.object(fio, 'extract_stats')
+def test_fio_direct(m_es, m_sh):
+    m_sh.fio.return_value.stderr = None
+    m_sh.fio.return_value.stdout = b'{}'
+
+    fio.fio('/some/path', loops=1, size='1m', direct=True)
+    args, kwargs = m_sh.fio.call_args
+    assert args[8] == '--direct=1'
+
+    fio.fio('/some/path', loops=1, size='1m', direct=False)
+    args, kwargs = m_sh.fio.call_args
+    assert args[8] == '--direct=0'
 
 
 def test_stats_extract():

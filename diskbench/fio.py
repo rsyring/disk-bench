@@ -8,7 +8,8 @@ import sh
 JobStat = namedtuple('JobStat', 'name bw iops usr_cpu sys_cpu')
 
 
-def fio(dpath, loops, size):
+def fio(dpath, loops, size, direct):
+    direct_num = '1' if direct else '0'
     result = sh.fio(
         '--directory', dpath,
         '--filename=disk~bench.tmp',
@@ -17,7 +18,7 @@ def fio(dpath, loops, size):
         '--size={}'.format(size),
         '--stonewall',
         '--ioengine=libaio',
-        '--direct=1',
+        '--direct={}'.format(direct_num),
         '--name=seqread', '--bs=1m', '--rw=read',
         '--name=seqwrite', '--bs=1m', '--rw=write',
         '--name=randread', '--bs=512k', '--rw=randread',
