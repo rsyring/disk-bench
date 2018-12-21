@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 @click.option('--size', default='1G')
 @click.option('--loops', default=3)
 @click.option('--style', default='table', type=click.Choice(['table', 'csv']))
-@click.option('--direct', is_flag=True, default=True)
+@click.option('--direct', is_flag=True, default=False)
 def db(fpath, size, loops, style, direct):
     stats = fio.fio(fpath, loops, size, direct)
     click.echo(format_stats(stats, style))
