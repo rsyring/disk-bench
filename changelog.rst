@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.1.2 released 2018-12-20
+-------------------------
+
+- fix some packaging issues (f908a1d_)
+
+.. _f908a1d: https://github.com/rsyring/disk-bench/commit/f908a1d
+
+
 0.1.1 released 2018-12-20
 -------------------------
 
