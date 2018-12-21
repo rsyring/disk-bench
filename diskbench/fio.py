@@ -32,7 +32,7 @@ def fio(dpath, loops, size):
 
     assert not result.stderr, result.stderr
 
-    fio_data = json.loads(result.stdout)
+    fio_data = json.loads(result.stdout.decode('utf-8'))
 
     return extract_stats(fio_data)
 
