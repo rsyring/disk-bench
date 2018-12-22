@@ -8,9 +8,10 @@ import sh
 JobStat = namedtuple('JobStat', 'name bw iops usr_cpu sys_cpu')
 
 
-def fio(dpath, seq_size, rand_size):
+def fio(dpath, seq_size, rand_size, direct):
     randsz_opt = '--size={}'.format(rand_size)
     seqsz_opt = '--size={}'.format(seq_size)
+    direct_val = '1' if direct else '0'
 
     result = sh.fio(
         '--directory', dpath,
@@ -18,6 +19,7 @@ def fio(dpath, seq_size, rand_size):
         '--output-format=json',
         '--stonewall',
         '--ioengine=libaio',
+        '--direct={}'.format(direct_val),
         '--gtod_reduce=1',
         '--name=seqread', '--bs=1m', '--rw=read', seqsz_opt,
         '--name=seqwrite', '--bs=1m', '--rw=write', seqsz_opt,
