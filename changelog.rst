@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.2.0 released 2018-12-21
+-------------------------
+
+- change tests we run and output format (df6ac7b_)
+
+.. _df6ac7b: https://github.com/rsyring/disk-bench/commit/df6ac7b
+
+
 0.1.4 released 2018-12-21
 -------------------------
 
