@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.2.1 released 2018-12-22
+-------------------------
+
+- add fio command example to readme (d4f6bef_)
+- add direct flag back (578f509_)
+
+.. _d4f6bef: https://github.com/rsyring/disk-bench/commit/d4f6bef
+.. _578f509: https://github.com/rsyring/disk-bench/commit/578f509
+
+
 0.2.0 released 2018-12-21
 -------------------------
 
