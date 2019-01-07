@@ -2,6 +2,10 @@
 
 Disk Bench
 ##########
+.. image:: https://circleci.com/gh/rsyring/disk-bench.svg?style=svg&circle-token=e9c7768964a02f959e41735979118a78148ddf40
+    :target: https://circleci.com/gh/rsyring/disk-bench
+.. image:: https://badge.fury.io/py/disk-bench.svg
+    :target: https://badge.fury.io/py/disk-bench
 
 Designed to run similar tests as Crystal Disk Mark using fio with user friendly output options.
 
